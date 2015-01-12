@@ -1,0 +1,650 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Eighth App &mdash; TJ Intranet v3 (Build #6) documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v3 (Build #6)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="TJ Intranet v3 (Build #6) documentation" href="../index.html" />
+    <link rel="up" title="Apps Package" href="intranet.apps.html" />
+    <link rel="next" title="Files App" href="intranet.apps.files.html" />
+    <link rel="prev" title="Dashboard App" href="intranet.apps.dashboard.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          TJ Intranet</a>
+        <span class="navbar-text navbar-version pull-left"><b>v3</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Topics <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../setup/index.html">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setup/sandbox.html">Setting up Your Sandbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/server.html">Setting up the Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture/index.html">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/index.html#technologies">Technologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/index.html#resources">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developing/index.html">Developing for Intranet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developing/styleguide.html">Coding Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developing/workflow.html">Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="intranet.html">Source Code Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="intranet.apps.html">Apps Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intranet.db.html">Database Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intranet.middleware.html">Middleware Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intranet.settings.html">Settings Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intranet.utils.html">Utils Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../administration/index.html">Administration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../administration/index.html#task-1">Task 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/index.html#task-2">Task 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/index.html#task-3">Task 3</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Section <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Eighth App</a><ul>
+<li><a class="reference internal" href="#module-intranet.apps.eighth.models"><tt class="docutils literal"><span class="pre">models</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-intranet.apps.eighth.views"><tt class="docutils literal"><span class="pre">views</span></tt> Module</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="eighth-app">
+<h1>Eighth App<a class="headerlink" href="#eighth-app" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-intranet.apps.eighth.models">
+<span id="models-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">models</span></tt> Module<a class="headerlink" href="#module-intranet.apps.eighth.models" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="intranet.apps.eighth.models.EighthActivity">
+<em class="property">class </em><tt class="descclassname">intranet.apps.eighth.models.</tt><tt class="descname">EighthActivity</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthActivity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Represents an eighth period activity.</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd><ul class="first last simple">
+<li>name &#8211; The name of the activity.</li>
+<li>sponsors &#8211; The :class:<a href="#id1"><span class="problematic" id="id2">`</span></a>EighthSponsor`s for the activity.</li>
+</ul>
+</dd>
+</dl>
+<dl class="exception">
+<dt id="intranet.apps.eighth.models.EighthActivity.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivity.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://django.readthedocs.org/en/1.6.x/ref/exceptions.html#django.core.exceptions.ObjectDoesNotExist" title="(in Django v1.6)"><tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="intranet.apps.eighth.models.EighthActivity.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">EighthActivity.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivity.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://django.readthedocs.org/en/1.6.x/ref/exceptions.html#django.core.exceptions.MultipleObjectsReturned" title="(in Django v1.6)"><tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthActivity.capacity">
+<tt class="descclassname">EighthActivity.</tt><tt class="descname">capacity</tt><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthActivity.capacity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivity.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthActivity.eighthblock_set">
+<tt class="descclassname">EighthActivity.</tt><tt class="descname">eighthblock_set</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivity.eighthblock_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthActivity.eighthscheduledactivity_set">
+<tt class="descclassname">EighthActivity.</tt><tt class="descname">eighthscheduledactivity_set</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivity.eighthscheduledactivity_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthActivity.groups_allowed">
+<tt class="descclassname">EighthActivity.</tt><tt class="descname">groups_allowed</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivity.groups_allowed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthActivity.name_with_flags">
+<tt class="descclassname">EighthActivity.</tt><tt class="descname">name_with_flags</tt><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthActivity.name_with_flags"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivity.name_with_flags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthActivity.objects">
+<tt class="descclassname">EighthActivity.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2add7ef5e4d0&gt;</em><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivity.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="intranet.apps.eighth.models.EighthActivity.restricted_activities_available_to_user">
+<em class="property">classmethod </em><tt class="descclassname">EighthActivity.</tt><tt class="descname">restricted_activities_available_to_user</tt><big>(</big><em>user</em><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthActivity.restricted_activities_available_to_user"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivity.restricted_activities_available_to_user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthActivity.rooms">
+<tt class="descclassname">EighthActivity.</tt><tt class="descname">rooms</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivity.rooms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthActivity.sponsors">
+<tt class="descclassname">EighthActivity.</tt><tt class="descname">sponsors</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivity.sponsors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthActivity.undeleted_objects">
+<tt class="descclassname">EighthActivity.</tt><tt class="descname">undeleted_objects</tt><em class="property"> = &lt;intranet.apps.eighth.models.EighthActivityExcludeDeletedManager object at 0x2add7ef5e350&gt;</em><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivity.undeleted_objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthActivity.users_allowed">
+<tt class="descclassname">EighthActivity.</tt><tt class="descname">users_allowed</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivity.users_allowed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="intranet.apps.eighth.models.EighthActivityExcludeDeletedManager">
+<em class="property">class </em><tt class="descclassname">intranet.apps.eighth.models.</tt><tt class="descname">EighthActivityExcludeDeletedManager</tt><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthActivityExcludeDeletedManager"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivityExcludeDeletedManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.manager.Manager</span></tt></p>
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthActivityExcludeDeletedManager.get_query_set">
+<tt class="descname">get_query_set</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthActivityExcludeDeletedManager.get_query_set"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivityExcludeDeletedManager.get_query_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthActivityExcludeDeletedManager.get_queryset">
+<tt class="descname">get_queryset</tt><big>(</big><big>)</big><a class="headerlink" href="#intranet.apps.eighth.models.EighthActivityExcludeDeletedManager.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="intranet.apps.eighth.models.EighthBlock">
+<em class="property">class </em><tt class="descclassname">intranet.apps.eighth.models.</tt><tt class="descname">EighthBlock</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthBlock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Represents an eighth period block.</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd><ul class="first last simple">
+<li>date &#8211; The date of the block.</li>
+<li>block_letter &#8211; The block letter (e.g. A, B).</li>
+<li>locked &#8211; Whether signups are closed.</li>
+<li>activities &#8211; List of                         :class:<a href="#id3"><span class="problematic" id="id4">`</span></a>EighthScheduledActivity`s for the block.</li>
+</ul>
+</dd>
+</dl>
+<dl class="exception">
+<dt id="intranet.apps.eighth.models.EighthBlock.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthBlock.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://django.readthedocs.org/en/1.6.x/ref/exceptions.html#django.core.exceptions.ObjectDoesNotExist" title="(in Django v1.6)"><tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="intranet.apps.eighth.models.EighthBlock.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">EighthBlock.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthBlock.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://django.readthedocs.org/en/1.6.x/ref/exceptions.html#django.core.exceptions.MultipleObjectsReturned" title="(in Django v1.6)"><tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthBlock.activities">
+<tt class="descclassname">EighthBlock.</tt><tt class="descname">activities</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthBlock.activities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthBlock.eighthscheduledactivity_set">
+<tt class="descclassname">EighthBlock.</tt><tt class="descname">eighthscheduledactivity_set</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthBlock.eighthscheduledactivity_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthBlock.get_next_by_date">
+<tt class="descclassname">EighthBlock.</tt><tt class="descname">get_next_by_date</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#intranet.apps.eighth.models.EighthBlock.get_next_by_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthBlock.get_previous_by_date">
+<tt class="descclassname">EighthBlock.</tt><tt class="descname">get_previous_by_date</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#intranet.apps.eighth.models.EighthBlock.get_previous_by_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthBlock.get_surrounding_blocks">
+<tt class="descclassname">EighthBlock.</tt><tt class="descname">get_surrounding_blocks</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthBlock.get_surrounding_blocks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthBlock.get_surrounding_blocks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the blocks around the one given.
+Returns: a list of all of those blocks.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthBlock.next_blocks">
+<tt class="descclassname">EighthBlock.</tt><tt class="descname">next_blocks</tt><big>(</big><em>quantity=-1</em><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthBlock.next_blocks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthBlock.next_blocks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthBlock.objects">
+<tt class="descclassname">EighthBlock.</tt><tt class="descname">objects</tt><em class="property"> = &lt;intranet.apps.eighth.models.EighthBlockManager object at 0x2add7efee950&gt;</em><a class="headerlink" href="#intranet.apps.eighth.models.EighthBlock.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthBlock.previous_blocks">
+<tt class="descclassname">EighthBlock.</tt><tt class="descname">previous_blocks</tt><big>(</big><em>quantity=-1</em><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthBlock.previous_blocks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthBlock.previous_blocks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthBlock.save">
+<tt class="descclassname">EighthBlock.</tt><tt class="descname">save</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthBlock.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthBlock.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="intranet.apps.eighth.models.EighthBlockManager">
+<em class="property">class </em><tt class="descclassname">intranet.apps.eighth.models.</tt><tt class="descname">EighthBlockManager</tt><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthBlockManager"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthBlockManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.manager.Manager</span></tt></p>
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthBlockManager.get_current_blocks">
+<tt class="descname">get_current_blocks</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthBlockManager.get_current_blocks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthBlockManager.get_current_blocks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthBlockManager.get_first_upcoming_block">
+<tt class="descname">get_first_upcoming_block</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthBlockManager.get_first_upcoming_block"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthBlockManager.get_first_upcoming_block" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the first upcoming block (the first block that will
+take place in the future). If there is no block in the future,
+the most recent block will be returned</p>
+<p>Returns: the <cite>EighthBlock</cite> object</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="intranet.apps.eighth.models.EighthRoom">
+<em class="property">class </em><tt class="descclassname">intranet.apps.eighth.models.</tt><tt class="descname">EighthRoom</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthRoom"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthRoom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Represents a room in which an eighth period activity can be held</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd><ul class="first last simple">
+<li>Attribute &#8211; Description.</li>
+</ul>
+</dd>
+</dl>
+<dl class="exception">
+<dt id="intranet.apps.eighth.models.EighthRoom.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthRoom.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://django.readthedocs.org/en/1.6.x/ref/exceptions.html#django.core.exceptions.ObjectDoesNotExist" title="(in Django v1.6)"><tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="intranet.apps.eighth.models.EighthRoom.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">EighthRoom.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthRoom.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://django.readthedocs.org/en/1.6.x/ref/exceptions.html#django.core.exceptions.MultipleObjectsReturned" title="(in Django v1.6)"><tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthRoom.eighthactivity_set">
+<tt class="descclassname">EighthRoom.</tt><tt class="descname">eighthactivity_set</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthRoom.eighthactivity_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthRoom.eighthscheduledactivity_set">
+<tt class="descclassname">EighthRoom.</tt><tt class="descname">eighthscheduledactivity_set</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthRoom.eighthscheduledactivity_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthRoom.objects">
+<tt class="descclassname">EighthRoom.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2add7ef5e3d0&gt;</em><a class="headerlink" href="#intranet.apps.eighth.models.EighthRoom.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthRoom.unique_together">
+<tt class="descclassname">EighthRoom.</tt><tt class="descname">unique_together</tt><em class="property"> = ((u'name', u'capacity'),)</em><a class="headerlink" href="#intranet.apps.eighth.models.EighthRoom.unique_together" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity">
+<em class="property">class </em><tt class="descclassname">intranet.apps.eighth.models.</tt><tt class="descname">EighthScheduledActivity</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthScheduledActivity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Represents the relationship between an activity and a block in
+which it has been scheduled.</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd><ul class="first last simple">
+<li>block &#8211; the <a class="reference internal" href="#intranet.apps.eighth.models.EighthBlock" title="intranet.apps.eighth.models.EighthBlock"><tt class="xref py py-class docutils literal"><span class="pre">EighthBlock</span></tt></a> during which an                    <a class="reference internal" href="#intranet.apps.eighth.models.EighthActivity" title="intranet.apps.eighth.models.EighthActivity"><tt class="xref py py-class docutils literal"><span class="pre">EighthActivity</span></tt></a> has been scheduled</li>
+<li>activity &#8211; the scheduled <a class="reference internal" href="#intranet.apps.eighth.models.EighthActivity" title="intranet.apps.eighth.models.EighthActivity"><tt class="xref py py-class docutils literal"><span class="pre">EighthActivity</span></tt></a></li>
+<li>members &#8211; the <tt class="xref py py-class docutils literal"><span class="pre">User&lt;intranet.apps.users.models.User&gt;`s</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">who</span> <span class="pre">have</span> <span class="pre">signed</span> <span class="pre">up</span> <span class="pre">for</span> <span class="pre">an</span> <span class="pre">:class:`EighthBlock</span></tt></li>
+<li>comments &#8211; notes for the Eighth Office</li>
+<li>sponsors &#8211; <tt class="xref py py-class docutils literal"><span class="pre">EighthSponsor`s</span> <span class="pre">that</span> <span class="pre">will</span> <span class="pre">override</span> <span class="pre">the</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">:class:`EighthActivity</span></tt>&#8216;s default sponsors</li>
+<li>rooms &#8211; <tt class="xref py py-class docutils literal"><span class="pre">EighthRoom`s</span> <span class="pre">that</span> <span class="pre">will</span> <span class="pre">override</span> <span class="pre">the</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">:class:`EighthActivity</span></tt>&#8216;s default rooms</li>
+<li>attendance_taken &#8211; whether the <a class="reference internal" href="#intranet.apps.eighth.models.EighthSponsor" title="intranet.apps.eighth.models.EighthSponsor"><tt class="xref py py-class docutils literal"><span class="pre">EighthSponsor</span></tt></a> for                               the scheduled <a class="reference internal" href="#intranet.apps.eighth.models.EighthActivity" title="intranet.apps.eighth.models.EighthActivity"><tt class="xref py py-class docutils literal"><span class="pre">EighthActivity</span></tt></a>                               has taken attendance yet</li>
+<li>cancelled &#8211; whether the <a class="reference internal" href="#intranet.apps.eighth.models.EighthScheduledActivity" title="intranet.apps.eighth.models.EighthScheduledActivity"><tt class="xref py py-class docutils literal"><span class="pre">EighthScheduledActivity</span></tt></a>                        has been cancelled</li>
+</ul>
+</dd>
+</dl>
+<dl class="exception">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://django.readthedocs.org/en/1.6.x/ref/exceptions.html#django.core.exceptions.ObjectDoesNotExist" title="(in Django v1.6)"><tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">EighthScheduledActivity.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://django.readthedocs.org/en/1.6.x/ref/exceptions.html#django.core.exceptions.MultipleObjectsReturned" title="(in Django v1.6)"><tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.activity">
+<tt class="descclassname">EighthScheduledActivity.</tt><tt class="descname">activity</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.activity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.add_user">
+<tt class="descclassname">EighthScheduledActivity.</tt><tt class="descname">add_user</tt><big>(</big><em>user</em>, <em>request=None</em>, <em>force=False</em><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthScheduledActivity.add_user"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.add_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sign up a user to this scheduled activity if possible.</p>
+<p>Raises an exception if there&#8217;s a problem signing the user up
+unless the signup is forced.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.block">
+<tt class="descclassname">EighthScheduledActivity.</tt><tt class="descname">block</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.block" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.eighthsignup_set">
+<tt class="descclassname">EighthScheduledActivity.</tt><tt class="descname">eighthsignup_set</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.eighthsignup_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.get_true_capacity">
+<tt class="descclassname">EighthScheduledActivity.</tt><tt class="descname">get_true_capacity</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthScheduledActivity.get_true_capacity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.get_true_capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the capacity for the scheduled activity, taking into
+account activity defaults and overrides.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.get_true_rooms">
+<tt class="descclassname">EighthScheduledActivity.</tt><tt class="descname">get_true_rooms</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthScheduledActivity.get_true_rooms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.get_true_rooms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the rooms for the scheduled activity, taking into account
+activity defaults and overrides.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.get_true_sponsors">
+<tt class="descclassname">EighthScheduledActivity.</tt><tt class="descname">get_true_sponsors</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthScheduledActivity.get_true_sponsors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.get_true_sponsors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the sponsors for the scheduled activity, taking into account
+activity defaults and overrides.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.is_full">
+<tt class="descclassname">EighthScheduledActivity.</tt><tt class="descname">is_full</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthScheduledActivity.is_full"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.is_full" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.is_overbooked">
+<tt class="descclassname">EighthScheduledActivity.</tt><tt class="descname">is_overbooked</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthScheduledActivity.is_overbooked"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.is_overbooked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.is_too_early_to_signup">
+<tt class="descclassname">EighthScheduledActivity.</tt><tt class="descname">is_too_early_to_signup</tt><big>(</big><em>now=None</em><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthScheduledActivity.is_too_early_to_signup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.is_too_early_to_signup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.members">
+<tt class="descclassname">EighthScheduledActivity.</tt><tt class="descname">members</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.members" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.objects">
+<tt class="descclassname">EighthScheduledActivity.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2add7f001510&gt;</em><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.rooms">
+<tt class="descclassname">EighthScheduledActivity.</tt><tt class="descname">rooms</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.rooms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthScheduledActivity.sponsors">
+<tt class="descclassname">EighthScheduledActivity.</tt><tt class="descname">sponsors</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthScheduledActivity.sponsors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="intranet.apps.eighth.models.EighthSignup">
+<em class="property">class </em><tt class="descclassname">intranet.apps.eighth.models.</tt><tt class="descname">EighthSignup</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthSignup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthSignup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Represents a signup/membership in an eighth period activity.</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd><ul class="first last">
+<li><p class="first">user &#8211; The <a class="reference internal" href="intranet.apps.users.html#intranet.apps.users.models.User" title="intranet.apps.users.models.User"><tt class="xref py py-class docutils literal"><span class="pre">User</span></tt></a>                  who has signed up.</p>
+</li>
+<li><dl class="first docutils">
+<dt>scheduled_activity &#8211; The <a class="reference internal" href="#intranet.apps.eighth.models.EighthScheduledActivity" title="intranet.apps.eighth.models.EighthScheduledActivity"><tt class="xref py py-class docutils literal"><span class="pre">EighthScheduledActivity</span></tt></a> for which</dt>
+<dd><p class="first last">the user                                 has signed up.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">after_deadline &#8211; Whether the signup was after deadline.</p>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="exception">
+<dt id="intranet.apps.eighth.models.EighthSignup.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthSignup.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://django.readthedocs.org/en/1.6.x/ref/exceptions.html#django.core.exceptions.ObjectDoesNotExist" title="(in Django v1.6)"><tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="intranet.apps.eighth.models.EighthSignup.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">EighthSignup.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthSignup.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://django.readthedocs.org/en/1.6.x/ref/exceptions.html#django.core.exceptions.MultipleObjectsReturned" title="(in Django v1.6)"><tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthSignup.get_next_by_time">
+<tt class="descclassname">EighthSignup.</tt><tt class="descname">get_next_by_time</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#intranet.apps.eighth.models.EighthSignup.get_next_by_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthSignup.get_previous_by_time">
+<tt class="descclassname">EighthSignup.</tt><tt class="descname">get_previous_by_time</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#intranet.apps.eighth.models.EighthSignup.get_previous_by_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthSignup.objects">
+<tt class="descclassname">EighthSignup.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2add7f001d10&gt;</em><a class="headerlink" href="#intranet.apps.eighth.models.EighthSignup.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthSignup.scheduled_activity">
+<tt class="descclassname">EighthSignup.</tt><tt class="descname">scheduled_activity</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthSignup.scheduled_activity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthSignup.user">
+<tt class="descclassname">EighthSignup.</tt><tt class="descname">user</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthSignup.user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="intranet.apps.eighth.models.EighthSignup.validate_unique">
+<tt class="descclassname">EighthSignup.</tt><tt class="descname">validate_unique</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthSignup.validate_unique"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthSignup.validate_unique" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="intranet.apps.eighth.models.EighthSponsor">
+<em class="property">class </em><tt class="descclassname">intranet.apps.eighth.models.</tt><tt class="descname">EighthSponsor</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/intranet/apps/eighth/models.html#EighthSponsor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intranet.apps.eighth.models.EighthSponsor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Represents a sponsor for an eighth period activity.</p>
+<p>A sponsor could be linked to an actual user or just a name.</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd><ul class="first last simple">
+<li>user &#8211; A <a class="reference internal" href="intranet.apps.users.html#intranet.apps.users.models.User" title="intranet.apps.users.models.User"><tt class="xref py py-class docutils literal"><span class="pre">User</span></tt></a>                  object for the sponsor.</li>
+<li>name &#8211; The name of the sponsor</li>
+</ul>
+</dd>
+</dl>
+<dl class="exception">
+<dt id="intranet.apps.eighth.models.EighthSponsor.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthSponsor.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://django.readthedocs.org/en/1.6.x/ref/exceptions.html#django.core.exceptions.ObjectDoesNotExist" title="(in Django v1.6)"><tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="intranet.apps.eighth.models.EighthSponsor.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">EighthSponsor.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthSponsor.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://django.readthedocs.org/en/1.6.x/ref/exceptions.html#django.core.exceptions.MultipleObjectsReturned" title="(in Django v1.6)"><tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthSponsor.eighthactivity_set">
+<tt class="descclassname">EighthSponsor.</tt><tt class="descname">eighthactivity_set</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthSponsor.eighthactivity_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthSponsor.eighthscheduledactivity_set">
+<tt class="descclassname">EighthSponsor.</tt><tt class="descname">eighthscheduledactivity_set</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthSponsor.eighthscheduledactivity_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthSponsor.objects">
+<tt class="descclassname">EighthSponsor.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2add7ef5e0d0&gt;</em><a class="headerlink" href="#intranet.apps.eighth.models.EighthSponsor.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="intranet.apps.eighth.models.EighthSponsor.user">
+<tt class="descclassname">EighthSponsor.</tt><tt class="descname">user</tt><a class="headerlink" href="#intranet.apps.eighth.models.EighthSponsor.user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-intranet.apps.eighth.views">
+<span id="views-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">views</span></tt> Module<a class="headerlink" href="#module-intranet.apps.eighth.views" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, TJ Intranet Development Team.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

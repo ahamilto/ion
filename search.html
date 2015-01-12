@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>TJ Intranet Documentation &mdash; TJ Intranet v3 (Build #6) documentation</title>
+    <title>Search &mdash; TJ Intranet v3 (Build #6) documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -27,17 +27,24 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/searchtools.js"></script>
     <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
-    <link rel="top" title="TJ Intranet v3 (Build #6) documentation" href="#" />
-    <link rel="next" title="Setup" href="setup/index.html" />
+    <link rel="top" title="TJ Intranet v3 (Build #6) documentation" href="index.html" />
+  <script type="text/javascript">
+    jQuery(function() { Search.loadIndex("searchindex.js"); });
+  </script>
+  
+  <script type="text/javascript" id="searchindexloader"></script>
+  
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+
 
   </head>
   <body>
@@ -51,7 +58,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           TJ Intranet</a>
         <span class="navbar-text navbar-version pull-left"><b>v3</b></span>
       </div>
@@ -65,7 +72,7 @@
      id="dLabelGlobalToc"
      data-toggle="dropdown"
      data-target="#"
-     href="#">Topics <b class="caret"></b></a>
+     href="index.html">Topics <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul>
@@ -110,22 +117,7 @@
      href="#">Section <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"
       role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">TJ Intranet Documentation</a><ul>
-<li><a class="reference internal" href="#intro">Intro</a></li>
-<li><a class="reference internal" href="#contents">Contents</a><ul>
-<li><a class="reference internal" href="#setup">Setup</a></li>
-<li><a class="reference internal" href="#architecture">Architecture</a></li>
-<li><a class="reference internal" href="#developing-for-intranet">Developing for Intranet</a></li>
-<li><a class="reference internal" href="#source-code-documentation">Source Code Documentation</a></li>
-<li><a class="reference internal" href="#administration">Administration</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-</ul>
-</li>
-</ul>
-</ul>
+      aria-labelledby="dLabelLocalToc"></ul>
 </li>
               
             
@@ -141,13 +133,6 @@
 
           
             
-<form class="navbar-form navbar-right" action="search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
           
         </div>
     </div>
@@ -157,56 +142,35 @@
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="tj-intranet-documentation">
-<h1>TJ Intranet Documentation<a class="headerlink" href="#tj-intranet-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="intro">
-<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
-<p>Intranet3 (Ion) is the next-generation Intranet platform for TJHSST. Using Python, Django, Redis, Postgres, and many other technologies, Ion was developed from the ground up to be simple, well-documented, and extensible.</p>
-</div>
-<div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-</div>
-<div class="section" id="setup">
-<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><a class="reference internal" href="setup/server.html"><em>Setting up the server</em></a></li>
-<li><a class="reference internal" href="setup/sandbox.html"><em>Setting up a sandbox</em></a></li>
-</ul>
-</div>
-<div class="section" id="architecture">
-<h3>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h3>
-<p>Ion uses Django, Redis, Postgres, and many other Python frameworks and tools.</p>
-<p>See the <a class="reference internal" href="architecture/index.html"><em>Architecture documentation</em></a>.</p>
-</div>
-<div class="section" id="developing-for-intranet">
-<h3>Developing for Intranet<a class="headerlink" href="#developing-for-intranet" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><a class="reference internal" href="developing/workflow.html"><em>Workflow</em></a></li>
-<li><a class="reference internal" href="developing/styleguide.html"><em>Coding Style Guide</em></a></li>
-</ul>
-</div>
-<div class="section" id="source-code-documentation">
-<h3>Source Code Documentation<a class="headerlink" href="#source-code-documentation" title="Permalink to this headline">¶</a></h3>
-<p>Demo Django docs <a class="reference external" href="http://django.readthedocs.org/en/1.6.x/ref/settings.html#std:setting-ROOT_URLCONF" title="(in Django v1.6)"><tt class="xref std std-setting docutils literal"><span class="pre">ROOT_URLCONF</span></tt></a> setting.</p>
-<p>and python docs <a class="reference external" href="http://docs.python.org/library/threading.html#threading.Thread" title="(in Python v2.7)"><tt class="xref py py-class docutils literal"><span class="pre">threading.Thread</span></tt></a></p>
-<p>Go to the <a class="reference internal" href="sourcedoc/intranet.html"><em>Source Code Documentation</em></a></p>
-</div>
-<div class="section" id="administration">
-<h3>Administration<a class="headerlink" href="#administration" title="Permalink to this headline">¶</a></h3>
-<p>How to use Intranet</p>
-</div>
-</div>
-<div class="section" id="indices-and-tables">
-<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
-<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
-</ul>
-</div>
-</div>
+  <h1 id="search-documentation">Search</h1>
+  <div id="fallback" class="admonition warning">
+  <script type="text/javascript">$('#fallback').hide();</script>
+  <p>
+    Please activate JavaScript to enable the search
+    functionality.
+  </p>
+  </div>
+  <p>
+    From here you can search these documents. Enter your search
+    words into the box below and click "search". Note that the search
+    function will automatically search for all of the words. Pages
+    containing fewer words won't appear in the result list.
+  </p>
 
+  
+  <form class="form-inline" action="" method="get">
+    <div class="form-group">
+      <input type="text" class="form-control" name="q" value="" />
+    </div>
+    <input type="submit" class="btn btn-default" value="search" />
+    <span id="search-progress" style="padding-left: 10px"></span>
+  </form>  
+  
+  
+  
+  <div id="search-results">
+  
+  </div>
 
     </div>
       
